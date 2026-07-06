@@ -234,4 +234,4 @@ dependencies:
       - yarl==1.12.1
       - zipp==3.20.2
       - zope-interface==7.2
-prefix: /home/anaconda3/envs/MMDLPP
+prefix: /home/anaconda3/envs/MMDLDP
