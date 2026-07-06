@@ -13,7 +13,7 @@ conda activate MMDLPP
 - demo_main.py # Model training and testing, along with detailed specifications of configuration parameters and core functional components.
   
 - lib          # Data loading and model setting.
-  dataset_graph.py
+- - dataset_graph.py
   data_load.py
   loss.py
   model_clinic.py
