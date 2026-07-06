@@ -1,4 +1,4 @@
-name: MMDLPP
+name: MMDLDP
 channels:
   - pytorch
   - nvidia
