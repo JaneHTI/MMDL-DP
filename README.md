@@ -1,16 +1,11 @@
-# BMU-Net: A PyTorch Implementation
+# MMDL-DP: A PyTorch Implementation
 
-This is a PyTorch/GPU implementation of the paper "A multimodal machine-learning model for the stratification of breast cancer risk".
+This is a PyTorch/GPU implementation of the paper "A multimodal deep learning framework for psychopathology risk stratification and forecasting from birth to early adulthood".
 
 ## Install
 
-Clone repo and install requirements.txt
-
-```python
-git clone https://github.com/IMMULab/BMUNet
-cd BMUNet
-pip install -r requirements.txt
-```
+conda env create -f environment.yml
+conda activate MMDLPP
 
 ## Data
 
