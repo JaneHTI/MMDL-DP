@@ -5,48 +5,27 @@ This is a PyTorch/GPU implementation of the paper "A multimodal deep learning fr
 ## Install
 
 conda env create -f environment.yml
+
 conda activate MMDLPP
 
-## Data
+## Files and Usage
 
-### Input images
-
-Mammography module:  two mammography images (paired CC and MLO views)
-
-Ultrasound module: six ultrasound images (including transverse and longitudinal views of B-mode, colour Doppler and elastography images)
-
-BMU-Net model: unimodal, bimodal, multimodal inputs
-
-## Inference
-
-1. Download models from the latest release 
-2. Make a csv file with own data to test-path (example as `dataset_csv/mamm_test.csv`)
-
-```python
-# Mamm module
-python test_mamm.py --weight-path ./BMUNet_weight/mamm/mamm_model.bin --test-path ./dataset_csv/mamm_test.csv
-# Us module
-python test_us.py --weight-path ./BMUNet_weight/us/us_model.bin --test-path ./dataset_csv/us_test.csv
-# Bmu model
-python test_bmu.py --weight-path ./BMUNet_weight/bmu/bmu_images_metadata_model.bin --test-path ./dataset_csv/bmu_test.csv
-```
-
-## Training
-
-1. Make csv files with train and val dataset
-2. Convert DICOM format into PNG files `src/data/convert_dicom_to_png.py`
-3. Calculate the mean and std of mammography images in the train set(mamm module and bmu model) `src/data/get_dataset_stats.py`
-4. Change training parameters as required `config.yml`
-
-```python
-# Multi gpu parallelism
-sh run_distributed.sh main_mamm.py
-
-# Single gpu
-python main_mamm.py # mamm module
-python main_us.py # us module
-python main_bmu.py # bmu model
-```
+- demo_main.py # Model training and testing, along with detailed specifications of configuration parameters and core functional components.
+  
+- lib          # Data loading and model setting.
+  dataset_graph.py
+  data_load.py
+  loss.py
+  model_clinic.py
+  model_conn.py
+  model_fusion.py
+  model_t1.py
+  
+- data         # Data
+  
+- checkpoints  # Trained model
+  
+- utils        # Function for result analysis.
 
 ## **License**
 
